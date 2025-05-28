@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    .header {
+      background: #3b5998;
+      color: white;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .language-select select {
+      font-size: 14px;
+      padding: 4px;
+    }
+    .main {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+    }
+    .sidebar {
+      width: 160px; /* reduced by 20% from 200px */
+      background: #3b5998;
+      padding-top: 60px;
+      flex-shrink: 0;
+      height: calc(100vh - 60px);
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px 20px;
+      color: black;
+      text-decoration: underline;
+      font-weight: bold;
+      background: white;
+      margin: 5px;
+    }
+    .content {
+      padding: 20px;
+      background-color: white;
+      width: 100%;
+      min-height: 600px;
+    }
+    .back-button {
+      margin-bottom: 20px;
+      display: inline-block;
+      padding: 6px 12px;
+      background: #ccc;
+      color: #000;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    @media screen and (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+      }
+      .header {
+        flex-direction: column;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>Cold Storage</div>
+    <div class="language-select">
+      <select onchange="location = this.value;">
+        <option value="index.html">🇷🇴 RO</option>
+        <option value="index-en.html" selected>🇬🇧 EN</option>
+      </select>
+    </div>
+  </div>
+  <div class="main">
+    <div class="sidebar">
+      <a href="index-en.html">Home</a>
+      <a href="inchiriaza-en.html">Rent Storage Spaces</a>
+      <a href="cumpara-en.html">Buy Fruits and Vegetables</a>
+      <a href="despre-en.html">About Us</a>
+      <a href="contact-en.html">Contact</a>
+    </div>
+    <div class="content">
+      <a class="back-button" href="#" onclick="history.back()">&larr; Back</a>
+      <h2>Welcome to the Cold Storage for Fruits and Vegetables</h2>
+      <p>We offer modern storage spaces for your agricultural products.</p>
+    </div>
+  </div>
+</body>
+</html>
