@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .login-link {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      color: white;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <div class="sidebar">
@@ -14,10 +24,21 @@
     <a href="despre.html">Despre Noi</a>
     <a href="contact.html">Contact</a>
   </div>
-  <div class="header">Depozit frig</div>
+  <div class="header">
+    Depozit frig
+    <a href="intra-in-cont.html" class="login-link">Intră în cont</a>
+  </div>
   <div class="content">
     <a class="back-button" href="#" onclick="history.back()">&larr; Înapoi</a>
-    <h2>Contact</h2><p>Conținutul paginii contact...</p>
+    
+<h2>Contactează-ne</h2>
+<form>
+  <input type="text" name="nume" placeholder="Nume complet" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <textarea name="mesaj" rows="5" placeholder="Mesajul tău" required></textarea>
+  <button type="submit">Trimite</button>
+</form>
+
   </div>
 </body>
 </html>
